@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<?language javascript?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
 
+<!--Creates a border pane w/ a top section(with a button) and a center section(with a label) -->
 <BorderPane xmlns:fx="http://javafx.com/fxml/1">
-
+    <top>
+        <Button text = "Say Hello World!" onMouseClicked="reactToClick()"> </Button>
+    </top>
+    <center>
+        <Label text = "Default Message" fx:id="label1"> </Label>
+    </center>
+<!--Script to update the text of label1 once it is clicked -->
+    <fx:script>
+        function reactToClick(){
+        label1.setText("Hello 3035!")
+        }
+    </fx:script>
 </BorderPane>
+
+
+
 
